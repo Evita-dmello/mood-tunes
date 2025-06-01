@@ -26,12 +26,12 @@
       </div>
       
       <button class="email-login-btn" id="emailLoginBtn">Login</button>
-      <p class="signup-link">Don't have an account? <a href="/MusicRecommender/frontend/signup.html" id="signupLink">Sign up</a></p>
+      <p class="signup-link">Don't have an account? <a href="signup.html" id="signupLink">Sign up</a></p>
     </div>
   </div>
 
 <script type="module">
-  import { auth } from "/MusicRecommender/frontend/firebase-config.js";
+  import { auth } from "firebase-config.js";
   import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
 
   const loginBtn = document.getElementById("emailLoginBtn");
@@ -42,7 +42,7 @@
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      window.location.href = "/MusicRecommender/frontend/welcome.html";
+      window.location.href = "welcome.html";
     } catch (error) {
       alert(error.message); // you can replace this with a styled error display if needed
     }
