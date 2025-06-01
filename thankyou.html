@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Logged Out</title>
-  <link rel="stylesheet" href="/MusicRecommender/frontend/thankyou.css" />
+  <link rel="stylesheet" href="thankyou.css" />
 </head>
 <body>
   <div class="message-box">
@@ -32,7 +32,7 @@
     signOut(auth).then(() => {
       console.log("User signed out.");
       setTimeout(() => {
-        window.location.href = "/MusicRecommender/frontend/index.html"; // or homepage
+        window.location.href = "index.html"; // or homepage
       }, 9000); // 3 seconds delay
     }).catch((error) => {
       console.error("Sign out error:", error);
