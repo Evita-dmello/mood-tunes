@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Select Your Mood</title>
-  <link rel="stylesheet" href="/MusicRecommender/frontend/style_mood.css" />
+  <link rel="stylesheet" href="style_mood.css" />
 </head>
 <body>
   <div class="container">
@@ -36,7 +36,7 @@
 
   <!-- Script as Module -->
   <script type="module">
-    import { auth, db } from "/MusicRecommender/frontend/firebase-config.js";
+    import { auth, db } from "firebase-config.js";
     import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
     import { doc, updateDoc } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
 
@@ -46,7 +46,7 @@
     // Monitor user login
     onAuthStateChanged(auth, (user) => {
       if (!user) {
-        window.location.href = "/MusicRecommender/frontend/index.html";
+        window.location.href = "index.html";
       } else {
         currentUser = user;
       }
@@ -81,7 +81,7 @@
         alert("Please select a mood first!");
         return;
       }
-      window.location.href = "/MusicRecommender/frontend/genre.html";
+      window.location.href = "genre.html";
     });
   </script>
 </body>
