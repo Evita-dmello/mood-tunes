@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MoodTunes - Sign Up</title>
-  <link rel="stylesheet" href="/MusicRecommender/frontend/style_signup.css" />
-  <script type="module" src="/MusicRecommender/frontend/firebase-config.js"></script>
+  <link rel="stylesheet" href="/style_signup.css" />
+  <script type="module" src="/firebase-config.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 </head>
@@ -49,12 +49,12 @@
     </form>
        
     <div class="login-link">
-      Already have an account? <a href="/MusicRecommender/frontend/index.html">Login</a>
+      Already have an account? <a href="index.html">Login</a>
     </div>
   </div>
 
 <script type="module">
-  import { auth, db } from "/MusicRecommender/frontend/firebase-config.js";
+  import { auth, db } from "firebase-config.js";
   import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
   import { doc, setDoc } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
 
@@ -89,7 +89,7 @@
 
       document.getElementById("successMessage").style.display = "block";
       setTimeout(() => {
-        window.location.href = "/MusicRecommender/frontend/index.html";
+        window.location.href = "index.html";
       }, 2000);
 
     } catch (error) {
