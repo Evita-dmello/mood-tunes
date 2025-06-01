@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Select Your Genre</title>
   <link rel="stylesheet" href="style_genre.css" />
-  <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="/firebase-config.js"></script>
 </head>
 <body>
   <div class="container">
@@ -29,7 +29,7 @@
   <audio id="hover-sound" src="hover.wav" preload="auto"></audio>
 
   <script type="module">
-  import { auth, db } from "firebase-config.js";
+  import { auth, db } from "/firebase-config.js";
   import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
   import { doc, updateDoc } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
 
