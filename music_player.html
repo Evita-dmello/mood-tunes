@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Music Player</title>
-  <link rel="stylesheet" href="/MusicRecommender/frontend/music_player.css" />
-  <script type="module" src="/MusicRecommender/frontend/firebase-config.js"></script>
+  <link rel="stylesheet" href="music_player.css" />
+  <script type="module" src="firebase-config.js"></script>
 </head>
 <body>
   <div class="player-container">
@@ -29,7 +29,7 @@
   </div>
 
   <script type="module">
-    import { db, auth } from '/MusicRecommender/frontend/firebase-config.js';
+    import { db, auth } from 'firebase-config.js';
     import { doc, updateDoc, arrayUnion } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-lite.js";
 
     const audio = document.getElementById("audio");
@@ -100,11 +100,11 @@
     }
 
     document.getElementById("backBtn").addEventListener("click", () => {
-      window.location.href = "/MusicRecommender/frontend/music_suggestions.html";
+      window.location.href = "music_suggestions.html";
     });
 
     document.getElementById("nextPageBtn").addEventListener("click", () => {
-      window.location.href = "/MusicRecommender/frontend/favorites.html";
+      window.location.href = "favorites.html";
     });
 
     document.addEventListener('DOMContentLoaded', () => {
