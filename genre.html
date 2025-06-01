@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Select Your Genre</title>
-  <link rel="stylesheet" href="/MusicRecommender/frontend/style_genre.css" />
-  <script type="module" src="/MusicRecommender/frontend/firebase-config.js"></script>
+  <link rel="stylesheet" href="style_genre.css" />
+  <script type="module" src="firebase-config.js"></script>
 </head>
 <body>
   <div class="container">
@@ -26,10 +26,10 @@
     </div>
   </div>
 
-  <audio id="hover-sound" src="/MusicRecommender/frontend/hover.wav" preload="auto"></audio>
+  <audio id="hover-sound" src="hover.wav" preload="auto"></audio>
 
   <script type="module">
-  import { auth, db } from "/MusicRecommender/frontend/firebase-config.js";
+  import { auth, db } from "firebase-config.js";
   import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
   import { doc, updateDoc } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
 
@@ -43,7 +43,7 @@
     if (user) {
       currentUser = user;
     } else {
-      window.location.href = "/MusicRecommender/frontend/index.html";
+      window.location.href = "index.html";
     }
   });
 
@@ -67,7 +67,7 @@
   });
 
   document.getElementById("back-btn").addEventListener("click", () => {
-    window.location.href = "/MusicRecommender/frontend/mood_selector.html";
+    window.location.href = "mood_selector.html";
   });
 
   nextBtn.addEventListener("click", async () => {
@@ -76,7 +76,7 @@
       await updateDoc(userRef, {
         genre: selectedGenre
       });
-      window.location.href = "/MusicRecommender/frontend/music_suggestions.html";
+      window.location.href = "music_suggestions.html";
     }
   });
 </script>
